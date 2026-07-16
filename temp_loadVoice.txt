@@ -1,0 +1,22 @@
+function loadVoiceData() {
+    try {
+        const res = await fetch('/api/voices');
+        state.voiceData = await res.json();
+        // Populate both merge and AI voice dropdowns
+        populateLanguageDropdown('merge-language', 'merge-voice', 'merge-style');
+        populateLanguageDropdown('ai-language', 'ai-voice', null);
+        populateLanguageDropdown('dub-language', 'dub-voice', null);
+        populateLanguageDropdown('cartoon-language', 'cartoon-voice', null);
+    } catch (e) {
+        console.error('Failed to load voice data:', e);
+    }
+}
+
+function populateLanguageDropdown(langSelectId, voiceSelectId, styleSelectId) {
+    const langSel = $(langSelectId);
+    if (!langSel || !state.voiceData) return;
+
+    const voices = state.voiceData.voices;
+    langSel.innerHTML = '';
+
+   

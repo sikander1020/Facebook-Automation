@@ -1,0 +1,1565 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Facebook Automation – Bypass Copyright</title>
+    <meta name="description" content="Futuristic cyber command dashboard for Facebook Automation.">
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css?v=16">
+</head>
+<body>
+    <!-- Ambient Background Glows -->
+    <div class="decor-orb decor-orb-cyan"></div>
+    <div class="decor-orb decor-orb-purple"></div>
+
+    <div class="app-layout">
+        <!-- ═══════════════════════════════════════════
+             HEADER NAVBAR
+         ════════════════════════════════════════════ -->
+        <nav class="navbar">
+            <div class="navbar-brand">
+                <div class="brand-logo">
+                    <img src="/logo.png" class="brand-icon" style="width: 38px; height: 38px; object-fit: cover; border-radius: 8px; box-shadow: 0 0 15px rgba(0, 255, 255, 0.3); border: 1px solid rgba(0, 255, 255, 0.2);">
+                    <div class="brand-text">
+                        <h1>Facebook Automation</h1>
+                        <span class="brand-subtitle" style="color: #00ffff; text-shadow: 0 0 5px rgba(0,255,255,0.5);">Bypass Copyright • Developed by Sikandar</span>
+                    </div>
+                </div>
+            </div>
+            <div class="navbar-controls">
+                <!-- Eye-Catching Glowing Badge -->
+                <span class="meta-badge-glow">100% Copyright Bypass</span>
+                <!-- Theme Switcher Toggle -->
+                <button class="theme-toggle-btn" id="theme-toggle" type="button" title="Switch Theme">
+                    <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                        <circle cx="12" cy="12" r="5"/>
+                        <line x1="12" y1="1" x2="12" y2="3"/>
+                        <line x1="12" y1="21" x2="12" y2="23"/>
+                        <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/>
+                        <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/>
+                        <line x1="1" y1="12" x2="3" y2="12"/>
+                        <line x1="21" y1="12" x2="23" y2="12"/>
+                        <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/>
+                        <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/>
+                    </svg>
+                    <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" style="display:none;">
+                        <path d="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"/>
+                    </svg>
+                </button>
+            </div>
+        </nav>
+
+        <!-- ═══════════════════════════════════════════
+             METRICS GRID
+         ════════════════════════════════════════════ -->
+        <div class="metrics-grid">
+            <div class="metric-card">
+                <div class="metric-icon-box files-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M19 11H5m14 0a2 2 0 012 2v6a2 2 0 01-2 2H5a2 2 0 01-2-2v-6a2 2 0 012-2m14 0V9a2 2 0 00-2-2M5 11V9a2 2 0 012-2m0 0V5a2 2 0 012-2h6a2 2 0 012 2v2M7 7h10" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="metric-info">
+                    <span class="metric-value" id="stat-files">0</span>
+                    <span class="metric-label">Exported Videos</span>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon-box clips-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M6 10a4 4 0 108 0 4 4 0 00-8 0zm0 0V6a4 4 0 018 0v4m-8 0h8m-4 4v4m0 0l-3-3m3 3l3-3" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="metric-info">
+                    <span class="metric-value" id="stat-clips">0</span>
+                    <span class="metric-label">Clips Created</span>
+                </div>
+            </div>
+            <div class="metric-card">
+                <div class="metric-icon-box ai-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                        <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>
+                </div>
+                <div class="metric-info">
+                    <span class="metric-value" id="stat-ai">0</span>
+                    <span class="metric-label">AI Videos</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══════════════════════════════════════════
+             MAIN TAB NAVIGATION
+         ════════════════════════════════════════════ -->
+        <div class="main-tabs">
+            <button type="button" class="main-tab-btn active" data-tab="clipper">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M6 10a4 4 0 108 0 4 4 0 00-8 0zm0 0V6a4 4 0 018 0v4m-8 0h8" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="tab-label">YouTube Clipper</span>
+            </button>
+            <button type="button" class="main-tab-btn" data-tab="merger">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                    <line x1="7" y1="2" x2="7" y2="22"/>
+                    <line x1="17" y1="2" x2="17" y2="22"/>
+                    <line x1="2" y1="12" x2="22" y2="12"/>
+                </svg>
+                <span class="tab-label">Video Merger</span>
+            </button>
+            <button type="button" class="main-tab-btn" data-tab="ai-video">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="tab-label">Faceless Video Maker</span>
+            </button>
+            <button type="button" class="main-tab-btn" data-tab="ai-studio">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M2 12h4l3-9 5 18 3-9h5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="tab-label">AI Studio (Generators)</span>
+            </button>
+            <button type="button" class="main-tab-btn" data-tab="ai-dubber">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+                    <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/>
+                </svg>
+                <span class="tab-label">AI Dubber</span>
+            </button>
+            <button type="button" class="main-tab-btn" data-tab="cartoon-maker">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 4.5a3 3 0 100-6 3 3 0 000 6zM3 21h18M5 21v-4a7 7 0 0114 0v4"/>
+                </svg>
+                <span class="tab-label">AutoDraft Studio</span>
+            </button>
+            <button type="button" class="main-tab-btn" data-tab="auto-uploader">
+                <svg class="tab-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m4-5l5-5 5 5m-5-5v12" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+                <span class="tab-label">Auto Uploader</span>
+            </button>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TAB 1: YOUTUBE CLIPPER (existing — wrapped in tab-panel)
+         ════════════════════════════════════════════════════════════ -->
+        <div class="tab-panel active" id="tab-clipper">
+            <form id="clip-form" class="workspace-form">
+                <div class="dashboard-grid-3col">
+                    
+                    <!-- COLUMN 1: Import & Crop (Steps 1, 2, 3) -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>1. Import &amp; Slices</h2>
+                            <p class="panel-subtitle">Acquire video content and configure slicing thresholds.</p>
+                        </div>
+
+                        <!-- STEP 1: YouTube Video URL -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">1</span>
+                                <div class="step-title-wrap">
+                                    <h3>Video URL</h3>
+                                    <p class="step-desc">Enter the public YouTube, TikTok, or Instagram link to import.</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="input-with-icon">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <input type="text" id="url" name="url" placeholder="https://www.youtube.com/..., https://www.tiktok.com/..." required>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEP 2: Aspect Ratio -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">2</span>
+                                <div class="step-title-wrap">
+                                    <h3>Output Format</h3>
+                                    <p class="step-desc">Select the canvas layout configuration.</p>
+                                </div>
+                            </div>
+                            <div class="aspect-ratio-grid">
+                                <label class="aspect-card">
+                                    <input type="radio" name="aspect_ratio" value="original" checked>
+                                    <div class="aspect-preview original-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                            <rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 3"/>
+                                        </svg>
+                                    </div>
+                                    <div class="aspect-info">
+                                        <span class="aspect-title">Original</span>
+                                    </div>
+                                </label>
+
+                                <label class="aspect-card">
+                                    <input type="radio" name="aspect_ratio" value="vertical">
+                                    <div class="aspect-preview vertical-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="7" y="3" width="10" height="18" rx="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <div class="aspect-info">
+                                        <span class="aspect-title">Vertical (9:16)</span>
+                                    </div>
+                                </label>
+
+                                <label class="aspect-card">
+                                    <input type="radio" name="aspect_ratio" value="horizontal">
+                                    <div class="aspect-preview horizontal-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                            <rect x="3" y="6" width="18" height="12" rx="1.5"/>
+                                        </svg>
+                                    </div>
+                                    <div class="aspect-info">
+                                        <span class="aspect-title">Horizontal (16:9)</span>
+                                    </div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- STEP 3: Slicing Method -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">3</span>
+                                <div class="step-title-wrap">
+                                    <h3>Slicing Method</h3>
+                                    <p class="step-desc">Select split configurations.</p>
+                                </div>
+                            </div>
+
+                            <div class="segment-tabs">
+                                <button type="button" class="segment-tab-btn" data-type="full" id="clip-toggle-full">
+                                    <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <rect x="3" y="3" width="18" height="18" rx="2" ry="2"></rect>
+                                    </svg>
+                                    Full Video
+                                </button>
+                                <button type="button" class="segment-tab-btn active" data-type="auto" id="clip-toggle-auto">
+                                    <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13 10V3L4 14h7v7l9-11h-7z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    Auto-Split
+                                </button>
+                                <button type="button" class="segment-tab-btn" data-type="timestamps" id="clip-toggle-ts">
+                                    <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <circle cx="12" cy="12" r="10"/>
+                                        <polyline points="12 6 12 12 16 14"/>
+                                    </svg>
+                                    Timestamps
+                                </button>
+                            </div>
+
+                            <!-- Full Video Panel -->
+                            <div id="full-clip-panel" class="slicing-panel">
+                                <p style="color:var(--text-muted); font-size:0.9rem; margin-bottom:10px;">Process the entire video as one single clip without splitting it.</p>
+                            </div>
+
+                            <!-- Auto Split Panel -->
+                            <div id="auto-clip-panel" class="slicing-panel active">
+                                <div class="form-group inline-row">
+                                    <label for="interval">Duration per segment</label>
+                                    <div class="input-suffix-group">
+                                        <input type="number" id="interval" name="interval" value="30" min="1" max="1800">
+                                        <span class="input-suffix">s</span>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Custom Timestamps Panel -->
+                            <div id="timestamps-clip-panel" class="slicing-panel">
+                                <div class="form-group">
+                                    <label for="timestamps">Timestamp Ranges (Seconds)</label>
+                                    <input type="text" id="timestamps" name="timestamps" placeholder="e.g. 10-40, 55-85">
+                                    <span class="input-helper">Comma-separated start-end frames</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- COLUMN 2: Customization & Rendering (Step 4 & Action button) -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>2. Filters &amp; Output</h2>
+                            <p class="panel-subtitle">Evade automated matching algorithms and compile video files.</p>
+                        </div>
+
+                        <!-- STEP 4: Safety Filters -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">4</span>
+                                <div class="step-title-wrap">
+                                    <h3>Safety Customizations</h3>
+                                    <p class="step-desc">Configure visual adjustments to structure layout transformations.</p>
+                                </div>
+                            </div>
+
+                            <div class="toggles-grid">
+                                <label class="toggle-control">
+                                    <span class="toggle-label">↔ Flip</span>
+                                    <input type="checkbox" name="mirror" value="true" checked>
+                                    <span class="toggle-switch"></span>
+                                </label>
+
+                                <label class="toggle-control">
+                                    <span class="toggle-label">🔍 Zoom</span>
+                                    <input type="checkbox" name="zoom" value="true" checked>
+                                    <span class="toggle-switch"></span>
+                                </label>
+
+                                <label class="toggle-control">
+                                    <span class="toggle-label">🎨 Color</span>
+                                    <input type="checkbox" name="color_shift" value="true" checked>
+                                    <span class="toggle-switch"></span>
+                                </label>
+
+                                <label class="toggle-control">
+                                    <span class="toggle-label">🛡️ Anti-Watermark</span>
+                                    <input type="checkbox" name="anti_watermark" value="true" checked>
+                                    <span class="toggle-switch"></span>
+                                </label>
+                            </div>
+
+                            <div class="form-grid">
+                                <div class="form-group">
+                                    <label for="text_overlay">Text Overlay Watermark</label>
+                                    <input type="text" id="text_overlay" name="text_overlay" placeholder="e.g., Custom Brand Overlay">
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2col">
+                                <div class="form-group">
+                                    <label for="border_color">Border Color</label>
+                                    <select id="border_color" name="border_color">
+                                        <option value="none" selected>No Border</option>
+                                        <option value="black">Black</option>
+                                        <option value="green">Green (Green Screen)</option>
+                                        <option value="blue">Blue</option>
+                                        <option value="red">Red</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="border_width">Width (px)</label>
+                                    <input type="number" id="border_width" name="border_width" value="0" min="0" max="100">
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2col">
+                                <div class="form-group">
+                                    <label for="speed">Video Speed</label>
+                                    <select id="speed" name="speed">
+                                        <option value="1.0">Standard (1.0×)</option>
+                                        <option value="1.04" selected>Safe Speed-up (1.04×)</option>
+                                        <option value="1.08">Fast Speed-up (1.08×)</option>
+                                        <option value="0.95">Slight Slow-down (0.95×)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="pitch_shift">Audio Pitch</label>
+                                    <select id="pitch_shift" name="pitch_shift">
+                                        <option value="0.0">Normal (0.0)</option>
+                                        <option value="0.8" selected>Slight High (+0.8)</option>
+                                        <option value="1.5">High Pitch (+1.5)</option>
+                                        <option value="-0.8">Slight Low (-0.8)</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container" id="clip-progress">
+                            <div class="progress-details">
+                                <span class="progress-status">
+                                    <span class="spinner-dot"></span>
+                                    <span id="clip-step">Downloading video…</span>
+                                </span>
+                                <span class="progress-percent" id="clip-pct">0%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" id="clip-fill"></div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-button" id="clip-submit-btn">
+                            <span class="btn-text">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 4v16m8-8H4" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Create &amp; Bypass Video Clips
+                            </span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </div>
+
+                    <!-- COLUMN 3: Exported Library -->
+                    <div class="library-panel">
+                        <div class="panel-header library-header">
+                            <div>
+                                <h2>Exported Clips</h2>
+                                <p class="panel-subtitle">Automatically expires in 30 minutes.</p>
+                            </div>
+                            <div class="library-actions">
+                                <button class="library-action-btn refresh-btn" id="refresh-gallery" type="button" title="Refresh list">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <path d="M21.5 2v6h-6M21.34 15.57a10 10 0 11-.57-8.38l.56-.56" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                                <button class="library-action-btn clear-btn" id="clear-library-btn" type="button" title="Clear all files">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                                        <polyline points="3 6 5 6 21 6"/>
+                                        <path d="M19 6v14a2 2 0 01-2 2H7a2 2 0 01-2-2V6m3 0V4a2 2 0 012-2h4a2 2 0 012 2v2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+
+                        <!-- Search Input -->
+                        <div class="search-wrap">
+                            <svg class="search-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <circle cx="11" cy="11" r="8"/>
+                                <line x1="21" y1="21" x2="16.65" y2="16.65"/>
+                            </svg>
+                            <input type="text" id="library-search" placeholder="Search files…">
+                        </div>
+
+                        <!-- Gallery List -->
+                        <div class="library-list" id="gallery-container">
+                            <div class="empty-library">
+                                <div class="empty-art">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                                        <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                                        <line x1="7" y1="2" x2="7" y2="22"/>
+                                        <line x1="17" y1="2" x2="17" y2="22"/>
+                                        <line x1="2" y1="12" x2="22" y2="12"/>
+                                    </svg>
+                                </div>
+                                <p class="empty-title">No exported clips</p>
+                                <p class="empty-desc">Run a clipping operation to begin.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                </div><!-- /dashboard-grid-3col -->
+            </form>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TAB 2: VIDEO MERGER
+         ════════════════════════════════════════════════════════════ -->
+        <div class="tab-panel" id="tab-merger">
+            <form id="merge-form" class="workspace-form">
+                <div class="dashboard-grid-2col">
+                    
+                    <!-- LEFT COLUMN: Video Upload + Audio -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>Video Merger</h2>
+                            <p class="panel-subtitle">Merge clips with voiceover, background music &amp; filters.</p>
+                        </div>
+
+                        <!-- Video Upload Zone -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">1</span>
+                                <div class="step-title-wrap">
+                                    <h3>Upload Video Clips</h3>
+                                    <p class="step-desc">Select multiple video files to merge together.</p>
+                                </div>
+                            </div>
+                            <div class="upload-zone" id="merge-video-zone">
+                                <svg class="upload-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 15v4a2 2 0 01-2 2H5a2 2 0 01-2-2v-4m4-5l5-5 5 5m-5-5v12" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="upload-zone-text">Drag &amp; drop videos or click to browse</p>
+                                <p class="upload-zone-hint">MP4, MOV, AVI — multiple files supported</p>
+                                <input type="file" name="videos" id="merge-videos-input" multiple accept="video/*">
+                            </div>
+                            <div class="upload-file-list" id="merge-video-list"></div>
+                        </div>
+
+                        <!-- Audio Source -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">2</span>
+                                <div class="step-title-wrap">
+                                    <h3>Audio Source</h3>
+                                    <p class="step-desc">Choose voiceover method for the merged video.</p>
+                                </div>
+                            </div>
+
+                            <div class="audio-source-tabs">
+                                <button type="button" class="audio-src-btn active" data-src="script">🎙️ TTS Script</button>
+                                <button type="button" class="audio-src-btn" data-src="upload">📁 Upload Audio</button>
+                                <button type="button" class="audio-src-btn" data-src="none">🔇 No Audio</button>
+                            </div>
+
+                            <!-- TTS Script Panel -->
+                            <div class="audio-panel active" id="merge-audio-script">
+                                <div class="form-group" style="margin-bottom:10px;">
+                                    <label for="merge-script">Script Text</label>
+                                    <textarea id="merge-script" name="script_text" rows="4" placeholder="Type your voiceover script here…"></textarea>
+                                </div>
+
+                                <div class="form-grid-2col">
+                                    <div class="form-group">
+                                        <label for="merge-language">Language</label>
+                                        <select id="merge-language"></select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="merge-voice">Voice</label>
+                                        <select id="merge-voice"></select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group" style="margin-bottom:10px;">
+                                    <label for="merge-style">Voice Style / Mood</label>
+                                    <select id="merge-style">
+                                        <option value="">🎙️ Default Style</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-grid-2col">
+                                    <div class="form-group">
+                                        <label for="merge-rate">Speech Rate</label>
+                                        <select id="merge-rate">
+                                            <option value="+0%">Normal</option>
+                                            <option value="+12%">Faster (+12%)</option>
+                                            <option value="+28%">Fast (+28%)</option>
+                                            <option value="-12%">Slower (-12%)</option>
+                                            <option value="-25%">Slow (-25%)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="merge-pitch">Pitch</label>
+                                        <select id="merge-pitch">
+                                            <option value="+0Hz">Normal</option>
+                                            <option value="+80Hz">Higher (+80Hz)</option>
+                                            <option value="+180Hz">Very High (+180Hz)</option>
+                                            <option value="-60Hz">Lower (-60Hz)</option>
+                                            <option value="-120Hz">Very Low (-120Hz)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Age Preset</label>
+                                    <div class="age-presets-row" id="merge-age-presets">
+                                        <button type="button" class="age-preset-btn" data-rate="+28%" data-pitch="+180Hz">👧 Child</button>
+                                        <button type="button" class="age-preset-btn" data-rate="+12%" data-pitch="+80Hz">🧑 Teen</button>
+                                        <button type="button" class="age-preset-btn active" data-rate="+0%" data-pitch="+0Hz">👩 Adult</button>
+                                        <button type="button" class="age-preset-btn" data-rate="-12%" data-pitch="-60Hz">👴 Aged</button>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="voice-preview-btn" id="merge-preview-btn">
+                                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                        <polygon points="5 3 19 12 5 21 5 3"/>
+                                    </svg>
+                                    Preview Voice
+                                </button>
+                            </div>
+
+                            <!-- Upload Audio Panel -->
+                            <div class="audio-panel" id="merge-audio-upload">
+                                <div class="upload-zone">
+                                    <svg class="upload-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zm12-2a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <p class="upload-zone-text">Upload voiceover audio file</p>
+                                    <p class="upload-zone-hint">MP3, WAV, M4A</p>
+                                    <input type="file" name="audio_file" id="merge-audio-file" accept="audio/*">
+                                </div>
+                            </div>
+
+                            <!-- No Audio Panel -->
+                            <div class="audio-panel" id="merge-audio-none">
+                                <p style="font-size:0.82rem;color:var(--text-muted);text-align:center;padding:16px 0;">
+                                    No voiceover will be added. Only background music (optional) will be applied.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Settings + Submit -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>Merge Settings</h2>
+                            <p class="panel-subtitle">Output format, background music, and audio options.</p>
+                        </div>
+
+                        <!-- Aspect Ratio -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">3</span>
+                                <div class="step-title-wrap">
+                                    <h3>Output Format</h3>
+                                    <p class="step-desc">Canvas layout for the merged video.</p>
+                                </div>
+                            </div>
+                            <div class="aspect-ratio-grid">
+                                <label class="aspect-card">
+                                    <input type="radio" name="merge_aspect_ratio" value="vertical" checked>
+                                    <div class="aspect-preview vertical-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="18" rx="1.5"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Vertical</span></div>
+                                </label>
+                                <label class="aspect-card">
+                                    <input type="radio" name="merge_aspect_ratio" value="horizontal">
+                                    <div class="aspect-preview horizontal-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="1.5"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Horizontal</span></div>
+                                </label>
+                                <label class="aspect-card">
+                                    <input type="radio" name="merge_aspect_ratio" value="original">
+                                    <div class="aspect-preview original-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="3" width="18" height="18" rx="2" stroke-dasharray="3 3"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Original</span></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Background Music -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">4</span>
+                                <div class="step-title-wrap">
+                                    <h3>Background Music</h3>
+                                    <p class="step-desc">Optional music track mixed under voiceover.</p>
+                                </div>
+                            </div>
+                            <div class="upload-zone">
+                                <svg class="upload-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zm12-2a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="upload-zone-text">Upload background music (optional)</p>
+                                <p class="upload-zone-hint">MP3, WAV — will loop to match video length</p>
+                                <input type="file" name="bg_music_file" id="merge-bg-music" accept="audio/*">
+                            </div>
+                        </div>
+
+                        <!-- Trim Audio Toggle -->
+                        <div class="step-card">
+                            <label class="toggle-control" style="margin-bottom:0;">
+                                <span class="toggle-label">✂️ Trim audio to video length</span>
+                                <input type="checkbox" name="trim_audio" value="true" checked>
+                                <span class="toggle-switch"></span>
+                            </label>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container" id="merge-progress">
+                            <div class="progress-details">
+                                <span class="progress-status">
+                                    <span class="spinner-dot"></span>
+                                    <span id="merge-step">Merging videos…</span>
+                                </span>
+                                <span class="progress-percent" id="merge-pct">0%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" id="merge-fill"></div>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="submit-button" id="merge-submit-btn">
+                            <span class="btn-text">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <rect x="2" y="2" width="20" height="20" rx="2.18" ry="2.18"/>
+                                    <line x1="7" y1="2" x2="7" y2="22"/>
+                                    <line x1="17" y1="2" x2="17" y2="22"/>
+                                    <line x1="2" y1="12" x2="22" y2="12"/>
+                                </svg>
+                                Merge &amp; Export Video
+                            </span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TAB 3: AI VIDEO GENERATOR
+         ════════════════════════════════════════════════════════════ -->
+        <div class="tab-panel" id="tab-ai-video">
+            <form id="ai-video-form" class="workspace-form">
+                <div class="dashboard-grid-2col">
+
+                    <!-- LEFT COLUMN: Script + Theme -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>AI Video Generator</h2>
+                            <p class="panel-subtitle">Script-to-video with auto imagery, narration &amp; stock footage.</p>
+                        </div>
+
+                        <!-- Script Input -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">1</span>
+                                <div class="step-title-wrap">
+                                    <h3>Script</h3>
+                                    <p class="step-desc">Each sentence becomes a separate visual slide with narration.</p>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea id="ai-script" name="script_text" rows="6" placeholder="Enter your video script here. Each sentence will become a slide with auto imagery and narration.&#10;&#10;Example: The sun rises over the mountain peaks. Birds soar through the golden sky. Nature awakens to a new day." required></textarea>
+                                <span class="input-helper">Tip: Use short sentences (under 500 words total) for best results.</span>
+                            </div>
+                        </div>
+
+                        <!-- Theme Selector -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">2</span>
+                                <div class="step-title-wrap">
+                                    <h3>Visual Theme</h3>
+                                    <p class="step-desc">Stock footage style for background visuals.</p>
+                                </div>
+                            </div>
+                            <div class="theme-grid">
+                                <label class="theme-card selected">
+                                    <input type="radio" name="theme" value="auto" checked>
+                                    <span class="theme-emoji">🤖</span>
+                                    <span class="theme-name">Auto</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="space">
+                                    <span class="theme-emoji">🚀</span>
+                                    <span class="theme-name">Space</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="tech">
+                                    <span class="theme-emoji">💻</span>
+                                    <span class="theme-name">Tech</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="nature">
+                                    <span class="theme-emoji">🌿</span>
+                                    <span class="theme-name">Nature</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="finance">
+                                    <span class="theme-emoji">💰</span>
+                                    <span class="theme-name">Finance</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="city">
+                                    <span class="theme-emoji">🏙️</span>
+                                    <span class="theme-name">City</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="abstract">
+                                    <span class="theme-emoji">🎨</span>
+                                    <span class="theme-name">Abstract</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="horror">
+                                    <span class="theme-emoji">👻</span>
+                                    <span class="theme-name">Horror</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="cartoon">
+                                    <span class="theme-emoji">🦄</span>
+                                    <span class="theme-name">2D Cartoon</span>
+                                </label>
+                                <label class="theme-card">
+                                    <input type="radio" name="theme" value="ai_generative">
+                                    <span class="theme-emoji">✨</span>
+                                    <span class="theme-name">AI Image</span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Voice + Settings -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>Voice &amp; Output</h2>
+                            <p class="panel-subtitle">Configure narration voice and export format.</p>
+                        </div>
+
+                        <!-- Voice Settings -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">3</span>
+                                <div class="step-title-wrap">
+                                    <h3>Narration Voice</h3>
+                                    <p class="step-desc">Select the AI voice for narration.</p>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2col">
+                                <div class="form-group">
+                                    <label for="ai-language">Language</label>
+                                    <select id="ai-language"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ai-voice">Voice</label>
+                                    <select id="ai-voice"></select>
+                                </div>
+                            </div>
+
+                            <div class="form-grid-2col">
+                                <div class="form-group">
+                                    <label for="ai-rate">Speech Rate</label>
+                                    <select id="ai-rate">
+                                        <option value="+0%">Normal</option>
+                                        <option value="+12%">Faster (+12%)</option>
+                                        <option value="+28%">Fast (+28%)</option>
+                                        <option value="-12%">Slower (-12%)</option>
+                                        <option value="-25%">Slow (-25%)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="ai-pitch">Pitch</label>
+                                    <select id="ai-pitch">
+                                        <option value="+0Hz">Normal</option>
+                                        <option value="+80Hz">Higher (+80Hz)</option>
+                                        <option value="+180Hz">Very High (+180Hz)</option>
+                                        <option value="-60Hz">Lower (-60Hz)</option>
+                                        <option value="-120Hz">Very Low (-120Hz)</option>
+                                        <option value="-150Hz">Ultra Deep (-150Hz)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <button type="button" class="voice-preview-btn" id="ai-preview-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                                Preview Voice
+                            </button>
+                        </div>
+
+                        <!-- Aspect Ratio -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">4</span>
+                                <div class="step-title-wrap">
+                                    <h3>Output Format</h3>
+                                    <p class="step-desc">Choose aspect ratio for the generated video.</p>
+                                </div>
+                            </div>
+                            <div class="aspect-ratio-grid">
+                                <label class="aspect-card selected">
+                                    <input type="radio" name="ai_aspect_ratio" value="vertical" checked>
+                                    <div class="aspect-preview vertical-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="18" rx="1.5"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Vertical</span></div>
+                                </label>
+                                <label class="aspect-card">
+                                    <input type="radio" name="ai_aspect_ratio" value="horizontal">
+                                    <div class="aspect-preview horizontal-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="1.5"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Horizontal</span></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Background Music -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">5</span>
+                                <div class="step-title-wrap">
+                                    <h3>Background Music</h3>
+                                    <p class="step-desc">Optional background track.</p>
+                                </div>
+                            </div>
+                            <div class="upload-zone">
+                                <svg class="upload-zone-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M9 18V5l12-2v13M9 18a3 3 0 11-6 0 3 3 0 016 0zm12-2a3 3 0 11-6 0 3 3 0 016 0z" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                <p class="upload-zone-text">Upload background music (optional)</p>
+                                <p class="upload-zone-hint">MP3, WAV</p>
+                                <input type="file" name="bg_music_file" id="ai-bg-music" accept="audio/*">
+                            </div>
+                        </div>
+
+                        <!-- Trim Audio Toggle -->
+                        <div class="step-card">
+                            <label class="toggle-control" style="margin-bottom:0;">
+                                <span class="toggle-label">✂️ Trim audio to video length</span>
+                                <input type="checkbox" name="ai_trim_audio" value="true" checked>
+                                <span class="toggle-switch"></span>
+                            </label>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container" id="ai-progress">
+                            <div class="progress-details">
+                                <span class="progress-status">
+                                    <span class="spinner-dot"></span>
+                                    <span id="ai-step">Generating AI video…</span>
+                                </span>
+                                <span class="progress-percent" id="ai-pct">0%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" id="ai-fill"></div>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="submit-button" id="ai-submit-btn">
+                            <span class="btn-text">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                Generate AI Video
+                            </span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TAB 4: AI DUBBER
+         ════════════════════════════════════════════════════════════ -->
+        <div class="tab-panel" id="tab-ai-dubber">
+            <form id="ai-dubber-form" class="workspace-form">
+                <div class="dashboard-grid-2col">
+
+                    <!-- LEFT COLUMN: Source Video & Settings -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>AI Video Dubber</h2>
+                            <p class="panel-subtitle">Automatically transcribe, translate, and dub an existing video.</p>
+                        </div>
+
+                        <!-- Video Selection Input -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">1</span>
+                                <div class="step-title-wrap">
+                                    <h3>Source Video</h3>
+                                    <p class="step-desc">Provide the video you want to dub.</p>
+                                </div>
+                            </div>
+                            
+                            <!-- Input Method Toggle -->
+                            <div class="audio-source-tabs" style="margin-bottom: 15px;">
+                                <label class="source-tab active">
+                                    <input type="radio" name="dub_input_method" value="url" checked>
+                                    <span class="tab-text">Video URL</span>
+                                </label>
+                                <label class="source-tab">
+                                    <input type="radio" name="dub_input_method" value="upload">
+                                    <span class="tab-text">Upload Video</span>
+                                </label>
+                                <label class="source-tab">
+                                    <input type="radio" name="dub_input_method" value="library">
+                                    <span class="tab-text">Library File</span>
+                                </label>
+                            </div>
+
+                            <!-- URL Input -->
+                            <div class="form-group" id="dub-url-group">
+                                <label>Video URL</label>
+                                <div class="input-with-icon">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                    <input type="text" id="dub-source-url" name="source_url" placeholder="e.g. YouTube, TikTok, Facebook link">
+                                </div>
+                                <span class="input-helper">The system will automatically download and dub this video.</span>
+                            </div>
+
+                            <!-- Upload Input -->
+                            <div class="form-group" id="dub-upload-group" style="display:none;">
+                                <label>Upload Video File</label>
+                                <input type="file" id="dub-source-upload" name="source_upload" accept="video/mp4,video/x-m4v,video/*" class="file-input">
+                                <span class="input-helper">Upload an MP4 file from your computer.</span>
+                            </div>
+
+                            <!-- Library Input -->
+                            <div class="form-group" id="dub-library-group" style="display:none;">
+                                <label>Filename from Output Folder</label>
+                                <div class="input-with-icon">
+                                    <svg class="input-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/>
+                                        <polyline points="7 10 12 15 17 10"/>
+                                        <line x1="12" y1="15" x2="12" y2="3"/>
+                                    </svg>
+                                    <input type="text" id="dub-source-file" name="source_file" placeholder="e.g. ai_video_a4fa1d5f.mp4">
+                                </div>
+                                <span class="input-helper">Copy the filename of the video from the Exported Library below.</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- RIGHT COLUMN: Language & Voice -->
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>Language &amp; Export</h2>
+                            <p class="panel-subtitle">Configure target language and narrator voice.</p>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">2</span>
+                                <div class="step-title-wrap">
+                                    <h3>Dubbing Settings</h3>
+                                    <p class="step-desc">Translation and narration choices.</p>
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Target Language</label>
+                                <select id="dub-language" name="target_lang" class="modern-select" required></select>
+                            </div>
+
+                            <div class="form-group">
+                                <label>Narrator Voice</label>
+                                <select id="dub-voice" name="voice" class="modern-select" required></select>
+                                <span class="input-helper">Ensure the voice language matches the target language.</span>
+                            </div>
+
+                            <button type="button" class="voice-preview-btn" id="dub-preview-btn">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                                Preview Voice
+                            </button>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container" id="dub-progress" style="display:none;">
+                            <div class="progress-details">
+                                <span class="progress-status">
+                                    <span class="spinner-dot"></span>
+                                    <span id="dub-step">Dubbing in progress. This may take a few minutes...</span>
+                                </span>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <button type="submit" class="submit-button" id="dub-submit-btn">
+                            <span class="btn-text">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <path d="M12 1a3 3 0 00-3 3v8a3 3 0 006 0V4a3 3 0 00-3-3z"/>
+                                    <path d="M19 10v2a7 7 0 01-14 0v-2M12 19v4M8 23h8"/>
+                                </svg>
+                                Start AI Dubbing
+                            </span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- ═══════════════════════════════════════════════════════════
+             TAB 5: 2D CARTOON MAKER
+         ════════════════════════════════════════════════════════════ -->
+        <div class="tab-panel" id="tab-cartoon-maker">
+            <form id="cartoon-form" class="workspace-form">
+                <!-- MAIN COLUMN: AutoDraft Studio -->
+                <div class="workspace-column" style="max-width: 1200px; margin: 0 auto; width: 100%;">
+                    
+                    <div class="step-card" style="border: 2px solid #b366ff; box-shadow: 0 0 15px rgba(179,102,255,0.2);">
+                        <div class="step-header">
+                            <span class="step-num" style="background: linear-gradient(135deg, #b366ff 0%, #4facfe 100%);">⚡</span>
+                            <div class="step-title-wrap">
+                                <h3>AutoDraft 1-Click Studio</h3>
+                                <p class="step-desc">Provide a topic. AI works as Writer, Artist, Animator, Voice Actor, and Editor.</p>
+                            </div>
+                        </div>
+
+                        <!-- 2-COLUMN LAYOUT FOR STUDIO -->
+                        <div style="display: flex; gap: 30px; margin-top: 15px; flex-wrap: wrap;">
+                            
+                            <!-- LEFT COLUMN: INPUTS -->
+                            <div style="flex: 1; min-width: 300px;">
+                                <div class="form-group">
+                                    <label for="autodraft-topic" style="font-size:1.1rem; color:#fff;">Story Topic</label>
+                                    <textarea id="autodraft-topic" rows="3" placeholder="e.g. A thirsty crow finds a magical forest..." style="font-size:1.05rem;"></textarea>
+                                </div>
+                                
+                                <!-- Optional Settings -->
+                                <div class="form-grid-2col" style="margin-top: 15px; display: grid; grid-template-columns: 1fr 1fr; gap: 15px;">
+                                    <div class="form-group">
+                                        <label>Visual Style</label>
+                                        <select id="autodraft-style">
+                                            <option value="3D Pixar Disney Style">Kids Cartoon (3D)</option>
+                                            <option value="Spooky dark horror cartoon style">Horror Cartoon</option>
+                                            <option value="Anime Makoto Shinkai style">Anime</option>
+                                            <option value="Children's watercolor storybook illustration">Storybook</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Video Duration</label>
+                                        <select id="autodraft-duration">
+                                            <option value="Short (1 min, 4-5 scenes)">Short (1 min)</option>
+                                            <option value="Medium (3-5 min, 10-15 scenes)">Medium (3-5 min)</option>
+                                            <option value="Long (10 min, 30+ scenes)">Long (10 min)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Language</label>
+                                        <select id="autodraft-lang">
+                                            <option value="Urdu">Urdu</option>
+                                            <option value="English">English</option>
+                                            <option value="Hindi">Hindi</option>
+                                            <option value="CVoice Premium">CVoice Premium (AI Characters)</option>
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Voice Actor</label>
+                                        <select id="autodraft-voice" name="autodraft_voice">
+                                            <!-- Will be populated by JS -->
+                                        </select>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Format</label>
+                                        <select id="autodraft-format">
+                                            <option value="horizontal">Horizontal (YouTube)</option>
+                                            <option value="vertical">Vertical (Shorts/Reels)</option>
+                                        </select>
+                                    </div>
+                                </div>
+
+                                <button type="button" class="submit-button" id="autodraft-submit-btn" style="margin-top:25px; font-size:1.1rem; padding:15px; background: linear-gradient(135deg, #b366ff 0%, #4facfe 100%);">
+                                    <span class="btn-text">🚀 GENERATE FULL VIDEO</span>
+                                    <span class="btn-spinner"></span>
+                                </button>
+                            </div>
+
+                            <!-- RIGHT COLUMN: DASHBOARD -->
+                            <div style="flex: 1; min-width: 300px;">
+                                <div id="autodraft-dashboard" style="background: rgba(0,0,0,0.3); border-radius: 8px; padding: 20px; height: 100%; border: 1px solid rgba(255,255,255,0.05);">
+                                    <h4 style="margin-bottom: 20px; color:#4facfe; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 10px; display: flex; align-items: center; gap: 10px;">
+                                        <span class="material-symbols-outlined" style="font-size: 1.2rem;">live_tv</span>
+                                        Production Monitor
+                                    </h4>
+                                    
+                                    <div class="dashboard-step db-story" id="db-story">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Story Generation</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                    <div class="dashboard-step db-char" id="db-char">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Character Design</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                    <div class="dashboard-step db-scene" id="db-scene">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Scene Creation</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                    <div class="dashboard-step db-image" id="db-image">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Image Generation (FLUX/SDXL)</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                    <div class="dashboard-step db-anim" id="db-anim">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Animation (SVD/Wan)</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                    <div class="dashboard-step db-voice" id="db-voice">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Voice & Audio</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                    <div class="dashboard-step db-render" id="db-render">
+                                        <span class="db-icon">⏳</span> <span class="db-text">Video Editor & Rendering</span> <span class="db-status">Waiting</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <style>
+                            .dashboard-step { display: flex; align-items: center; justify-content: space-between; padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.05); }
+                            .dashboard-step:last-child { border-bottom: none; }
+                            .db-text { flex-grow: 1; margin-left: 12px; color: #aaa; font-size: 0.95rem; }
+                            .db-status { font-size: 0.85rem; color: #888; font-family: monospace; background: rgba(0,0,0,0.5); padding: 4px 10px; border-radius: 4px;}
+                            .db-active .db-text { color: #fff; font-weight: bold; }
+                            .db-active .db-status { color: #4facfe; border: 1px solid #4facfe; background: rgba(79, 172, 254, 0.1);}
+                            .db-done .db-text { color: #fff; }
+                            .db-done .db-status { color: #4ade80; background: rgba(74, 222, 128, 0.1); border: 1px solid rgba(74, 222, 128, 0.3);}
+                            /* Hide original confusing elements */
+                            .hide-legacy { display: none; }
+                        </style>
+                    </div>
+                </div> <!-- End Main Column -->
+
+                    <!-- HIDE MANUAL AND OLD VIDEO COMPILER TO PREVENT CONFUSION -->
+                    <div class="workspace-column hide-legacy" style="display:none;">
+                        <!-- Manual Script Editor -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">M</span>
+                                <div class="step-title-wrap">
+                                    <h3>Master Script Editor</h3>
+                                    <p class="step-desc">Manually write or edit the script to control exact prompts and dialogues.</p>
+                                </div>
+                            </div>
+                            <textarea id="cartoon-script-text" name="script_text" rows="12"></textarea>
+                            <button type="button" class="submit-button" id="cartoon-submit-btn-legacy" onclick="document.getElementById('cartoon-submit-btn').click()">Compile</button>
+                        </div>
+                    </div>
+
+                    <!-- Hidden legacy compiler panel -->
+                    <div class="workspace-column hide-legacy" style="display:none;">
+                        <div class="panel-header">
+                            <h2>Video Compiler</h2>
+                        </div>
+
+                        <!-- Step 3: Pro Motion Mode -->
+                        <div class="step-card" style="border-left: 4px solid #b366ff; background: rgba(179, 102, 255, 0.05);">
+                            <div class="step-header">
+                                <span class="step-num" style="background: #b366ff;">★</span>
+                                <div class="step-title-wrap">
+                                    <h3>Free Pro Motion Mode (Beta)</h3>
+                                    <p class="step-desc">Use HuggingFace FLUX & Video Diffusion for true AutoDraft-style motion. (Warning: takes 15-20 mins)</p>
+                                </div>
+                            </div>
+                            <div class="form-group" style="margin-top: 10px;">
+                                <label style="display: flex; align-items: center; gap: 10px; cursor: pointer;">
+                                    <input type="checkbox" name="pro_motion_mode" id="cartoon-pro-motion" style="width: 20px; height: 20px;">
+                                    <strong>Enable AutoDraft-Style True Motion</strong>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Voice Actor -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">4</span>
+                                <div class="step-title-wrap">
+                                    <h3>Voice Actor</h3>
+                                    <p class="step-desc">Choose the voice for your cartoon characters.</p>
+                                </div>
+                            </div>
+                            <div class="form-grid-2col">
+                                <div class="form-group">
+                                    <label for="cartoon-language">Language</label>
+                                    <select id="cartoon-language"></select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cartoon-voice">Voice</label>
+                                    <select id="cartoon-voice" name="voice"></select>
+                                </div>
+                            </div>
+                            <div class="form-grid-2col" style="margin-top: 10px;">
+                                <div class="form-group">
+                                    <label for="cartoon-rate">Speech Rate</label>
+                                    <select id="cartoon-rate" name="rate">
+                                        <option value="-12%">Slower (-12%)</option>
+                                        <option value="+0%">Normal</option>
+                                        <option value="+12%">Faster (+12%)</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="cartoon-pitch">Pitch</label>
+                                    <select id="cartoon-pitch" name="pitch">
+                                        <option value="+0Hz">Normal</option>
+                                        <option value="+40Hz">Slight High</option>
+                                        <option value="-40Hz">Slight Low</option>
+                                        <option value="+120Hz">Child / High</option>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Step 4: Format -->
+                        <div class="step-card">
+                            <div class="step-header">
+                                <span class="step-num">4</span>
+                                <div class="step-title-wrap">
+                                    <h3>Format</h3>
+                                    <p class="step-desc">Canvas layout for the cartoon.</p>
+                                </div>
+                            </div>
+                            <div class="aspect-ratio-grid">
+                                <label class="aspect-card">
+                                    <input type="radio" name="cartoon_aspect_ratio" value="horizontal" checked>
+                                    <div class="aspect-preview horizontal-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="6" width="18" height="12" rx="1.5"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Horizontal (YouTube)</span></div>
+                                </label>
+                                <label class="aspect-card">
+                                    <input type="radio" name="cartoon_aspect_ratio" value="vertical">
+                                    <div class="aspect-preview vertical-preview">
+                                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="7" y="3" width="10" height="18" rx="1.5"/></svg>
+                                    </div>
+                                    <div class="aspect-info"><span class="aspect-title">Vertical (Shorts/Reels)</span></div>
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Progress Bar -->
+                        <div class="progress-container" id="cartoon-progress">
+                            <div class="progress-details">
+                                <span class="progress-status">
+                                    <span class="spinner-dot"></span>
+                                    <span id="cartoon-step">Initializing generation…</span>
+                                </span>
+                                <span class="progress-percent" id="cartoon-pct">0%</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" id="cartoon-fill"></div>
+                            </div>
+                        </div>
+
+                        <!-- Submit Button -->
+                        <button type="submit" class="submit-button" id="cartoon-submit-btn">
+                            <span class="btn-text">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                                Compile Cartoon Video
+                            </span>
+                            <span class="btn-spinner"></span>
+                        </button>
+                        
+                        <!-- Storyboard Preview Container -->
+                        <div id="cartoon-storyboard" style="margin-top: 20px;"></div>
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- =======================================================
+             TAB: AI STUDIO (GENERATORS)
+         ======================================================== -->
+        <div class="tab-panel" id="tab-ai-studio">
+            <form id="ai-studio-form" class="workspace-form">
+                <div class="dashboard-grid-2col">
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>MuAPI Studio (Generators)</h2>
+                            <p class="panel-subtitle">Generate completely custom Images or Videos using 200+ MuAPI models.</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="form-group inline-row">
+                                <label>What to Generate?</label>
+                                <div class="segment-tabs" style="margin-top:0; width:100%;">
+                                    <button type="button" class="segment-tab-btn active" data-type="image" id="ai-studio-type-image">
+                                        <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>
+                                        Image
+                                    </button>
+                                    <button type="button" class="segment-tab-btn" data-type="video" id="ai-studio-type-video">
+                                        <svg class="tab-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="23 7 16 12 23 17 23 7"/><rect x="1" y="5" width="15" height="14" rx="2" ry="2"/></svg>
+                                        Video
+                                    </button>
+                                </div>
+                                <input type="hidden" name="media_type" id="ai-studio-media-type" value="image">
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="form-group">
+                                <label for="ai-studio-prompt">Prompt</label>
+                                <textarea id="ai-studio-prompt" name="prompt" rows="4" placeholder="Describe exactly what you want to see..." required></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="ai-studio-style">Art Style (Optional)</label>
+                                <select id="ai-studio-style" name="style">
+                                    <option value="none">None / Let AI decide</option>
+                                    <option value="realistic">Cinematic Realistic</option>
+                                    <option value="cartoon">Cartoonish</option>
+                                    <option value="3d">3D Animation / Pixar</option>
+                                    <option value="anime">Anime</option>
+                                    <option value="watercolor">Watercolor</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="step-card" id="ai-studio-ref-card">
+                            <h3>Reference Image (Optional)</h3>
+                            <p style="font-size:13px; color:var(--text-muted); margin-bottom:10px;">Provide an image to base the video/image on.</p>
+                            <div class="upload-zone" id="ai-studio-ref-zone">
+                                <p class="upload-zone-text">Click or Drag Image Here</p>
+                                <input type="file" id="ai-studio-ref-file" name="reference_image" accept="image/png,image/jpeg,image/webp">
+                            </div>
+                            <div id="ai-studio-ref-list" class="file-list"></div>
+                        </div>
+                    </div>
+
+                    <div class="workspace-column">
+                        <div class="step-card">
+                            <h3>Generation Settings</h3>
+                            <div class="form-group" id="ai-studio-model-group">
+                                <label for="ai-studio-model">AI Model</label>
+                                <select id="ai-studio-model" name="model">
+                                    <!-- Populated by JS based on type -->
+                                    <option value="flux-dev">Flux Dev (Image)</option>
+                                    <option value="midjourney">Midjourney v7 (Image)</option>
+                                    <option value="gpt4o">GPT-4o (Image)</option>
+                                    <option value="seedream">Seedream (Image)</option>
+                                </select>
+                            </div>
+                            <div class="form-group" id="ai-studio-duration-group" style="display:none;">
+                                <label for="ai-studio-duration">Video Duration</label>
+                                <select id="ai-studio-duration" name="duration">
+                                    <option value="5">5 Seconds</option>
+                                    <option value="8">8 Seconds</option>
+                                    <option value="10">10 Seconds</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ai-studio-aspect">Aspect Ratio</label>
+                                <select id="ai-studio-aspect" name="aspect_ratio">
+                                    <option value="16:9">Landscape (16:9)</option>
+                                    <option value="9:16">Vertical (9:16)</option>
+                                    <option value="1:1">Square (1:1)</option>
+                                    <option value="4:3">Standard (4:3)</option>
+                                    <option value="21:9">Cinematic (21:9)</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="ai-studio-count">How Many to Generate?</label>
+                                <select id="ai-studio-count" name="count">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                    <option value="4">4</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div id="ai-studio-progress" class="progress-container" style="display:none; margin-bottom:15px;">
+                            <div class="progress-header">
+                                <span id="ai-studio-step">Generating Media...</span>
+                            </div>
+                            <div class="progress-track">
+                                <div class="progress-bar" id="ai-studio-fill" style="width: 100%;"></div>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="ai-studio-submit-btn">
+                            <span class="btn-text">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                                    <polygon points="5 3 19 12 5 21 5 3"/>
+                                </svg>
+                                Generate Media
+                            </span>
+                            <span class="btn-spinner"></span>
+                        </button>
+
+                        <!-- Results Container -->
+                        <div id="ai-studio-results" style="margin-top: 20px; display: none;">
+                            <h3>Generated Result:</h3>
+                            <div id="ai-studio-media-container" style="margin-top: 10px; border-radius: 8px; overflow: hidden; background: #000;">
+                                <!-- Media will be injected here -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <!-- =======================================================
+             TAB: AUTO UPLOADER
+         ======================================================== -->
+        <div class="tab-panel" id="tab-auto-uploader">
+            <form id="auto-upload-form" class="workspace-form">
+                <div class="dashboard-grid-2col">
+                    <div class="workspace-column">
+                        <div class="panel-header">
+                            <h2>One-Click Social Media Auto Uploader</h2>
+                            <p class="panel-subtitle">Automatically generate SEO (Title, Description, Hashtags) and upload your video to Shorts, Reels, and TikTok.</p>
+                        </div>
+                        
+                        <div class="step-card">
+                            <div class="form-group">
+                                <label for="au-topic">Video Topic (Used to generate perfect SEO)</label>
+                                <input type="text" id="au-topic" name="topic" placeholder="e.g., A funny cat jumping on a table" required>
+                            </div>
+                        </div>
+
+                        <div class="step-card">
+                            <div class="upload-zone" id="au-video-zone">
+                                <p class="upload-zone-text">Click or Drag Video to Upload</p>
+                                <input type="file" id="au-video-file" name="video_file" accept="video/mp4,video/mov" required>
+                            </div>
+                            <div id="au-video-list" class="file-list"></div>
+                        </div>
+
+                        <div class="step-card">
+                            <h3>Select Platforms</h3>
+                            <label class="toggle-control"><span class="toggle-label">YouTube Shorts</span><input type="checkbox" name="youtube_enabled" value="true" checked><span class="toggle-switch"></span></label>
+                            <label class="toggle-control"><span class="toggle-label">Instagram Reels</span><input type="checkbox" name="insta_enabled" value="true" checked><span class="toggle-switch"></span></label>
+                            <label class="toggle-control"><span class="toggle-label">TikTok</span><input type="checkbox" name="tiktok_enabled" value="true" checked><span class="toggle-switch"></span></label>
+                        </div>
+                    </div>
+
+                    <div class="workspace-column">
+                        <div class="step-card">
+                            <h3>Credentials</h3>
+                            <p style="font-size: 12px; color: #888; margin-bottom:10px;">For YouTube, a browser will open to authenticate. For Insta and TikTok, enter details below.</p>
+                            <div class="form-group">
+                                <label>Instagram Username</label>
+                                <input type="text" name="insta_username" placeholder="Insta username">
+                            </div>
+                            <div class="form-group">
+                                <label>Instagram Password</label>
+                                <input type="password" name="insta_password" placeholder="Insta password">
+                            </div>
+                            <div class="form-group">
+                                <label>Instagram Session ID (Optional, bypasses block)</label>
+                                <input type="password" name="insta_session_id" placeholder="sessionid cookie for Insta">
+                            </div>
+                            <div class="form-group">
+                                <label>TikTok Cookies (Full cookies.txt or sessionid)</label>
+                                <textarea name="tiktok_session_id" placeholder="Paste full Netscape cookies.txt content here for TikTok" style="width:100%; height:80px; resize:vertical; padding:8px; border-radius:4px; background:#1e1e1e; color:#fff; border:1px solid #333;"></textarea>
+                            </div>
+                        </div>
+
+                        <div id="au-status-container" style="display:none; padding:10px; background:#111; border-radius:8px; margin-bottom:15px;">
+                            <p id="au-status-text">Processing...</p>
+                        </div>
+
+                        <button type="submit" class="submit-button" id="au-submit-btn">
+                            <span class="btn-text">Upload Everywhere</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+        </div>
+
+        <div style="text-align: center; padding: 20px 0; margin-top: 20px; border-top: 1px solid rgba(255,255,255,0.05);">
+            <p style="color: #666; font-size: 13px; letter-spacing: 1px; text-transform: uppercase;">
+                Designed & Developed by <strong style="color: #00ffff; text-shadow: 0 0 5px rgba(0,255,255,0.4);">Sikandar</strong>
+            </p>
+        </div>
+    </div><!-- /app-layout -->
+
+    <!-- TOAST NOTIFICATIONS -->
+    <div id="toast-container" class="toast-container"></div>
+
+    <!-- Hidden audio for voice preview -->
+    <audio id="preview-audio" style="display:none;"></audio>
+
+    <script src="js/app.js?v=29"></script>
+</body>
+</html>
+    </div> <!-- /End of main tabs container -->
+
+    <!-- =======================================================
+         (Global Exported Library removed per request)
+         ======================================================= -->
+
+    <div class="modal" id="video-modal">
+        <div class="modal-overlay" id="modal-close"></div>
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 id="modal-title">▶ Playback</h3>
+                <button class="close-btn" id="modal-close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <video id="modal-player" controls></video>
+            </div>
+        </div>
+    </div>
+
+    <!-- Toast system -->
+    <div id="toast" class="toast"></div>
+

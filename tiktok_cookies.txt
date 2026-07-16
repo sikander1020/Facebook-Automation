@@ -1,0 +1,3 @@
+# TikTok Cookies
+.tiktok.com	TRUE	/	FALSE	2272828000	sessionid	YOUR_TIKTOK_SESSION_ID
+www.tiktok.com	FALSE	/	FALSE	2272828000	sessionid	YOUR_TIKTOK_SESSION_ID

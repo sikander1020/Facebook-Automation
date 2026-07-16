@@ -1,0 +1,47 @@
+function populateVoiceDropdown(voiceSelectId, lang, styleSelectId) {
+    const voiceSel = $(voiceSelectId);
+    if (!voiceSel || !state.voiceData) return;
+
+    const voices = state.voiceData.voices[lang] || {};
+    voiceSel.innerHTML = '';
+
+    Object.entries(voices).forEach(([label, id], i) => {
+        const opt = document.createElement('option');
+        opt.value = id;
+        opt.textContent = label;
+        if (i === 0) opt.selected = true;
+        voiceSel.appendChild(opt);
+    });
+
+    // Update styles on voice change
+    const updateStyles = () => {
+        if (styleSelectId) {
+            populateStyleDropdown(styleSelectId, voiceSel.value);
+        }
+    };
+
+    voiceSel.addEventListener('change', updateStyles);
+    updateStyles(); // initial populate
+}
+
+function populateStyleDropdown(styleSelectId, voiceId) {
+    const styleSel = $(styleSelectId);
+    if (!styleSel || !state.voiceData) return;
+
+    const styles = state.voiceData.voice_styles[voiceId] || [];
+    const labels = state.voiceData.mood_labels || {};
+
+    styleSel.innerHTML = '<option value="">🎙️ Default Style</option>';
+
+    styles.forEach(s => {
+        const opt = document.createElement('option');
+        opt.value = s;
+        opt.textContent = labels[s] || s;
+        styleSel.appendChild(opt);
+    });
+}
+
+// ─────────────────────────────────────────────────────────────────
+// VOICE PREVIEW
+// ─────────────────────────────────────────────────────────────────
+function initVoicePreview(previewBtnId, lan
